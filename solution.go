@@ -1,4 +1,4 @@
-package solution
+package square
 
 import (
 	"math"
@@ -12,15 +12,15 @@ const (
 
 type myInt int
 
-func CalcSquare(sideLen float64, sideNum myInt) float64 {
-	if sideNum == SidesTriangle {
+func CalcSquare(sideLen float64, sidesNum myInt) float64 {
+	if sidesNum == SidesTriangle {
 		x := (sideLen * 3) / 2
 		s := math.Sqrt(x * (x - sideLen) * (x - sideLen) * (x - sideLen))
 		return s
-	} else if sideNum == SidesSquare {
+	} else if sidesNum == SidesSquare {
 		s := sideLen * sideLen
 		return s
-	} else if sideNum == SidesCircle {
+	} else if sidesNum == SidesCircle {
 		s := math.Pi * (sideLen * sideLen)
 		return s
 	} else {
