@@ -12,15 +12,15 @@ const (
 
 type myInt int
 
-func CalcSquare(sideLen float64, sidesNum myInt) float64 {
-	if sidesNum == SidesTriangle {
+func CalcSquare(sideLen float64, sideNum myInt) float64 {
+	if sideNum == SidesTriangle {
 		x := (sideLen * 3) / 2
 		s := math.Sqrt(x * (x - sideLen) * (x - sideLen) * (x - sideLen))
 		return s
-	} else if sidesNum == SidesSquare {
+	} else if sideNum == SidesSquare {
 		s := sideLen * sideLen
 		return s
-	} else if sidesNum == SidesCircle {
+	} else if sideNum == SidesCircle {
 		s := math.Pi * (sideLen * sideLen)
 		return s
 	} else {
